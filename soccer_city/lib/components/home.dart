@@ -52,6 +52,7 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: TextField(
+                  obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'PASSWORD',
                     enabledBorder: OutlineInputBorder(
@@ -80,8 +81,21 @@ class _HomeState extends State<Home> {
                 ),
               ),
               const SizedBox(
-                height: 20.0,
-              )
+                height: 10.0,
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    child: const Text('Sign In'),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+
+              //Button
             ],
           ),
         ),
