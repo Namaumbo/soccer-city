@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soccer_city/components/dashboard.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -83,19 +84,29 @@ class _HomeState extends State<Home> {
               const SizedBox(
                 height: 10.0,
               ),
-
+              //Button
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: SizedBox(
                   width: double.infinity,
+                  height: 50.0,
                   child: ElevatedButton(
-                    child: const Text('Sign In'),
-                    onPressed: () {},
+                    child: const Text(
+                      'Sign In',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Dashboard()));
+                    },
                   ),
                 ),
               ),
-
-              //Button
             ],
           ),
         ),
