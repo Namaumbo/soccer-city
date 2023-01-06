@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -10,173 +12,157 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          appBar: AppBar(
-              automaticallyImplyLeading: false, title: const Text('Dashboard')),
-          body: Column(
-            children: <Widget>[
-              const SizedBox(
-                height: 40.0,
-              ),
-              Row(
-                children: <Widget>[
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    child: CircleAvatar(
-                      maxRadius: 30,
-                      child: Image(
-                        width: 50.0,
-                        image: AssetImage('assets/main.png'),
-                      ),
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      body: SafeArea(
+          child: Padding(
+        padding: const EdgeInsets.all(25.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                // hi name text
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    const Text(
+                      'Hi Daelo!',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25.0,
+                          wordSpacing: 5),
                     ),
+                    const SizedBox(height: 8.0),
+                    //date
+                    Text(
+                      '3-jan-2023',
+                      style: TextStyle(
+                          color: Colors.blue[200],
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    )
+                  ],
+                ),
+                // icon
+                Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.blue[600],
                   ),
-                  Column(
-                    children: <Widget>[
+                  child: const Icon(
+                    Icons.notifications,
+                    size: 35,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            //initial data
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                //current balance
+                Container(
+                  padding: const EdgeInsets.all(25),
+                  decoration: BoxDecoration(
+                      color: Colors.blue[600],
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Column(
+                    children: [
                       const Text(
-                        'Daelo Namaumbo',
+                        '5600',
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.fromLTRB(0, 0, 47, 0),
-                        child: const Text(
-                          '0880101010',
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.blueAccent,
-                              fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
+                      const SizedBox(
+                        height: 4.0,
+                      ),
+                      Text(
+                        'Balance',
+                        style: TextStyle(
+                          color: Colors.blue[200],
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
-                ],
-              ),
-              const SizedBox(
-                height: 40.0,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(80.0, 0, 0, 0),
-                child: Row(children: <Widget>[
-                  Wrap(
-                    spacing: 20.0,
-                    runSpacing: 20.0,
+                ),
+                //income total
+
+                Container(
+                  padding: const EdgeInsets.all(25),
+                  decoration: BoxDecoration(
+                      color: Colors.blue[600],
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Column(
                     children: [
-                      SizedBox(
-                        width: 80.0,
-                        height: 80.0,
-                        child: Card(
-                          color: Colors.blue,
-                          elevation: 2.0,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          child: Column(children: const <Widget>[
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                '2300',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                              child: Text(
-                                'income',
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 42, 62, 241)),
-                              ),
-                            )
-                          ]),
+                      const Text(
+                        '4050',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                      )
+                      ),
+                      const SizedBox(
+                        height: 4.0,
+                      ),
+                      Text(
+                        'INCOME',
+                        style: TextStyle(
+                          color: Colors.blue[200],
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
-                  Wrap(
-                    spacing: 20.0,
-                    runSpacing: 20.0,
+                ),
+                //outcome total
+                Container(
+                  padding: const EdgeInsets.all(25),
+                  decoration: Boius: BorderRadius.circular(12)),
+                  child: ColumnxDecoration(
+                      color: Colors.blue[600],
+                      borderRad(
                     children: [
-                      SizedBox(
-                        width: 80.0,
-                        height: 80.0,
-                        child: Card(
-                          color: Colors.blue,
-                          elevation: 2.0,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          child: Column(children: const <Widget>[
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                '2300',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                              child: Text(
-                                'income',
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 42, 62, 241)),
-                              ),
-                            )
-                          ]),
+                      const Text(
+                        '200',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                      )
+                      ),
+                      const SizedBox(
+                        height: 4.0,
+                      ),
+                      Text(
+                        'OUTCOME',
+                        style: TextStyle(
+                          color: Colors.blue[200],
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
-                  Wrap(
-                    spacing: 20.0,
-                    runSpacing: 20.0,
-                    children: [
-                      SizedBox(
-                        width: 80.0,
-                        height: 80.0,
-                        child: Card(
-                          color: Colors.blue,
-                          elevation: 2.0,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          child: Column(children: const <Widget>[
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                '2300',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                              child: Text(
-                                'income',
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 42, 62, 241)),
-                              ),
-                            )
-                          ]),
-                        ),
-                      )
-                    ],
-                  )
-                ]),
-              ),
-              Row(children: const <Widget>[Text('data')]),
-            ],
-          )),
+                )
+              ],
+            )
+          ],
+        ),
+      )),
     );
   }
 }

@@ -72,7 +72,7 @@ class _HomeState extends State<Home> {
               // forgetting password
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 30.0, vertical: 10.0),
+                    horizontal: 30.0, vertical: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
