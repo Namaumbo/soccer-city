@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -87,7 +85,7 @@ class _DashboardState extends State<Dashboard> {
                         height: 4.0,
                       ),
                       Text(
-                        'Balance',
+                        'BALANCE',
                         style: TextStyle(
                           color: Colors.blue[200],
                           fontSize: 15,
@@ -131,10 +129,10 @@ class _DashboardState extends State<Dashboard> {
                 //outcome total
                 Container(
                   padding: const EdgeInsets.all(25),
-                  decoration: Boius: BorderRadius.circular(12)),
-                  child: ColumnxDecoration(
+                  decoration: BoxDecoration(
                       color: Colors.blue[600],
-                      borderRad(
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Column(
                     children: [
                       const Text(
                         '200',
@@ -159,6 +157,127 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 )
               ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Center(
+                  child: Wrap(
+                spacing: 20,
+                runSpacing: 20,
+                children: [
+                  SizedBox(
+                    width: 140.0,
+                    height: 140.0,
+                    child: Card(
+                      color: Colors.blue[200],
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Center(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Column(children: [
+                          Image.asset(
+                            'assets/income.png',
+                            width: 80,
+                          ),
+                          Text(
+                            'data',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[600]),
+                          )
+                        ]),
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 140.0,
+                    height: 140.0,
+                    child: Card(
+                      color: Colors.blue[200],
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Center(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Column(children: [
+                          Image.asset(
+                            'assets/deposit.png',
+                            width: 80,
+                          ),
+                          Text(
+                            'data',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[600]),
+                          )
+                        ]),
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 140.0,
+                    height: 140.0,
+                    child: Card(
+                      color: Colors.blue[200],
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Center(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Column(children: [
+                          Image.asset(
+                            'assets/income.png',
+                            width: 80,
+                          ),
+                          Text(
+                            'income',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[600]),
+                          )
+                        ]),
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 140.0,
+                    height: 140.0,
+                    child: Card(
+                      color: Colors.blue[200],
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Center(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Column(children: [
+                          Image.asset(
+                            'assets/shutdown.png',
+                            width: 80,
+                          ),
+                          Text(
+                            'Logout',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[600]),
+                          )
+                        ]),
+                      )),
+                    ),
+                  )
+                ],
+              )),
             )
           ],
         ),
