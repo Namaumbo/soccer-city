@@ -171,111 +171,138 @@ class _DashboardState extends State<Dashboard> {
                   SizedBox(
                     width: 140.0,
                     height: 140.0,
-                    child: Card(
-                      color: Colors.blue[200],
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      child: Center(
-                          child: Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Column(children: [
-                          Image.asset(
-                            'assets/income.png',
-                            width: 80,
-                          ),
-                          Text(
-                            'data',
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blue[600]),
-                          )
-                        ]),
-                      )),
-                    ),
+                    child: InkWell(
+                        child: Card(
+                          color: Colors.blue[600],
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Center(
+                              child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Column(children: [
+                              Image.asset(
+                                'assets/income.png',
+                                width: 70,
+                                height: 70,
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const Text(
+                                'Statement',
+                                style: TextStyle(
+                                    fontSize: 23,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              )
+                            ]),
+                          )),
+                        ),
+                        onTap: () {
+                          print("Click event on Container");
+                        }),
                   ),
                   SizedBox(
                     width: 140.0,
                     height: 140.0,
-                    child: Card(
-                      color: Colors.blue[200],
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      child: Center(
-                          child: Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Column(children: [
-                          Image.asset(
-                            'assets/deposit.png',
-                            width: 80,
-                          ),
-                          Text(
-                            'data',
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blue[600]),
-                          )
-                        ]),
-                      )),
-                    ),
+                    child: InkWell(
+                        child: Card(
+                          color: Colors.blue[600],
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Center(
+                              child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Column(children: [
+                              Image.asset(
+                                'assets/deposit.png',
+                                width: 80,
+                              ),
+                              const Text(
+                                'Added',
+                                style: TextStyle(
+                                    fontSize: 23,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              )
+                            ]),
+                          )),
+                        ),
+                        onTap: () {
+                          print("Click event on Container");
+                        }),
                   ),
                   SizedBox(
                     width: 140.0,
                     height: 140.0,
-                    child: Card(
-                      color: Colors.blue[200],
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      child: Center(
-                          child: Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Column(children: [
-                          Image.asset(
-                            'assets/income.png',
-                            width: 80,
-                          ),
-                          Text(
-                            'income',
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blue[600]),
-                          )
-                        ]),
-                      )),
-                    ),
+                    child: InkWell(
+                        child: Card(
+                          color: Colors.blue[600],
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Center(
+                              child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Column(children: [
+                              Image.asset(
+                                'assets/cash-withdrawal.png',
+                                width: 70,
+                                height: 70,
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const Text(
+                                'Removed',
+                                style: TextStyle(
+                                    fontSize: 23,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              )
+                            ]),
+                          )),
+                        ),
+                        onTap: () {
+                          print("Click event on Container");
+                        }),
                   ),
                   SizedBox(
-                    width: 140.0,
-                    height: 140.0,
-                    child: Card(
-                      color: Colors.blue[200],
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                      child: Center(
-                          child: Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Column(children: [
-                          Image.asset(
-                            'assets/shutdown.png',
-                            width: 80,
+                      width: 140.0,
+                      height: 140.0,
+                      child: InkWell(
+                          child: Card(
+                            color: Colors.blue[600],
+                            elevation: 2,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.all(8),
+                              child: Column(children: [
+                                Image.asset(
+                                  'assets/shutdown.png',
+                                  width: 70,
+                                  height: 70,
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'Logout',
+                                  style: TextStyle(
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                )
+                              ]),
+                            )),
                           ),
-                          Text(
-                            'Logout',
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blue[600]),
-                          )
-                        ]),
-                      )),
-                    ),
-                  )
+                          onTap: () {
+                            print("Click event on Container");
+                          }))
                 ],
               )),
             )
